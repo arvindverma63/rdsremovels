@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your moving cost and volume with RDS Removals & Storage interactive calculator. Instant price range and vehicle capacity recommendations.">
+  <title>Removal Cost &amp; Volume Estimator | RDS Removals &amp; Storage</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Status Bar -->
+  <aside class="top-notice-bar">
+    <div class="container top-notice-container">
+      <div class="top-notice-left">
+        <span class="tn-item live-badge"><span class="pulse-dot"></span> Instant Online Estimates &bull; Fixed Price Guarantee After Free Survey</span>
+      </div>
+      <div class="top-notice-right">
+        <a href="tel:01747859213" class="tn-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>01747 859213</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="RDS Removals and Storage">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-title">RDS <strong>REMOVALS</strong></span>
+          <span class="brand-sub">&amp; SECURE STORAGE</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="calculator.html" class="nav-link active">Cost Calculator</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Why Choose Us</a></li>
+          <li class="nav-item"><a href="locations.html" class="nav-link">Areas Covered</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:01747859213" class="phone-action-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>01747 859213</span>
+        </a>
+        <button class="btn-primary open-quote-modal">Request Quote</button>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Cost Calculator</span>
+      </div>
+      <h1 class="page-title">Interactive Move Cost &amp; Volume Estimator</h1>
+      <p class="page-lead">Adjust your property size, transit mileage, and optional packing or storage to get instant pricing estimates and van recommendations.</p>
+    </div>
+  </section>
+
+  <!-- Main Calculator Engine Section -->
+  <section class="calculator-wrap-section">
+    <div class="container">
+      
+      <div class="calc-dashboard-card tilt-card">
+        <div class="calc-grid-layout">
+          
+          <!-- Left Controls Pane -->
+          <div class="calc-controls-pane">
+            
+            <!-- Bedroom Control -->
+            <div class="calc-field-group">
+              <div class="cfg-header">
+                <label>Number of Bedrooms</label>
+                <span class="cfg-pill-val" id="disp-bed-val">3 Bedroom House</span>
+              </div>
+              <div class="seg-button-group">
+                <button type="button" class="seg-pill-btn" data-bed="1">1 Bed</button>
+                <button type="button" class="seg-pill-btn" data-bed="2">2 Bed</button>
+                <button type="button" class="seg-pill-btn active" data-bed="3">3 Bed</button>
+                <button type="button" class="seg-pill-btn" data-bed="4">4 Bed</button>
+                <button type="button" class="seg-pill-btn" data-bed="5">5+ Bed</button>
+              </div>
+              <input type="range" id="slider-bed" min="1" max="5" value="3" style="display:none;">
+            </div>
+
+            <!-- Distance Slider -->
+            <div class="calc-field-group">
+              <div class="cfg-header">
+                <label for="slider-distance">Estimated Distance (Miles)</label>
+                <span class="cfg-pill-val" id="disp-dist-val">25 Miles</span>
+              </div>
+              <input type="range" id="slider-distance" min="5" max="250" step="5" value="25" class="clean-slider">
+              <div class="slider-labels-row">
+                <span>5 mi (Local)</span>
+                <span>75 mi</span>
+                <span>150 mi</span>
+                <span>250 mi (National)</span>
+              </div>
+            </div>
+
+            <!-- Options Toggles -->
+            <div class="calc-toggles-grid">
+              <label class="clean-toggle-card">
+                <input type="checkbox" id="opt-packing" checked>
+                <span class="toggle-knob"></span>
+                <span class="toggle-label-meta">
+                  <strong>Full Packing Service</strong>
+                  <small>Boxes, bubble wrap &amp; labeling</small>
+                </span>
+              </label>
+
+              <label class="clean-toggle-card">
+                <input type="checkbox" id="opt-storage">
+                <span class="toggle-knob"></span>
+                <span class="toggle-label-meta">
+                  <strong>Include 1 Month Storage</strong>
+                  <small>CCTV monitored clean container</small>
+                </span>
+              </label>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 14px; font-size: 12px; color: var(--text-muted);">
+              <strong>Note on accuracy:</strong> This estimator models standard UK home furniture volumes. A free in-person or video survey confirms your fixed, guaranteed price before booking.
+            </div>
+
+          </div>
+
+          <!-- Right Result Pane -->
+          <div class="calc-result-pane">
+            
+            <div>
+              <div class="crp-header">
+                <div class="crp-vehicle">
+                  <div class="crp-v-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  </div>
+                  <div>
+                    <strong id="res-fleet-name">Luton Box Van + Tail Lift</strong>
+                    <span id="res-vol-label">Estimated Volume: ~850 cu ft</span>
+                  </div>
+                </div>
+                <span class="crp-cap-badge" id="res-load-pct">70% Fleet Capacity</span>
+              </div>
+
+              <!-- 3D Progress Fill Bar -->
+              <div class="crp-bar-track">
+                <div class="crp-bar-fill" id="res-capacity-bar" style="width: 70%;"></div>
+              </div>
+
+              <!-- Specs Grid -->
+              <div class="crp-specs-grid">
+                <div class="crp-spec-item">
+                  <span>Est. Time</span>
+                  <strong id="res-time-val">5 - 7 Hours</strong>
+                </div>
+                <div class="crp-spec-item">
+                  <span>Transit Cover</span>
+                  <strong style="color: #059669;">&pound;50k Free</strong>
+                </div>
+                <div class="crp-spec-item">
+                  <span>Crew Assigned</span>
+                  <strong id="res-crew-val">2 - 3 Movers</strong>
+                </div>
+              </div>
+
+              <!-- Price Box -->
+              <div class="crp-price-card">
+                <span class="cpc-label">Estimated Price Range</span>
+                <div class="cpc-amount" id="res-price-range">&pound;650 - &pound;850</div>
+                <span class="cpc-note">All inclusive &bull; No credit card required &bull; Fixed price guarantee</span>
+              </div>
+            </div>
+
+            <button class="btn-primary open-quote-modal" style="width: 100%; padding: 12px; font-size: 14px;">
+              <span>Lock In Estimate &amp; Book Free Survey</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How Our Pricing Works -->
+  <section style="padding: 40px 0; background: #ffffff; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header-wrap">
+        <span class="sub-tag">Fair &amp; Transparent</span>
+        <h2 class="section-title">How Our Pricing Works</h2>
+        <p class="section-desc">We pride ourselves on 100% upfront pricing with zero hidden surcharges on moving day.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 20px;">
+          <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">1. Free Pre-Move Survey</h4>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">Our coordinator visits in person or connects via video call to confirm exact cubic volume and parking access.</p>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 20px;">
+          <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">2. Fixed Written Quotation</h4>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">You receive a binding, itemized quote detailing vehicle size, crew numbers, packaging, and £50k insurance.</p>
+        </div>
+        <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 20px;">
+          <h4 style="font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">3. No Completion Day Surprises</h4>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">Key delays? We understand solicitors often delay keys until 3pm or 4pm. We remain on site patiently with no surprise penalties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top-grid">
+      <div class="footer-about">
+        <a href="index.html" class="brand-link">
+          <div class="brand-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">RDS <strong>REMOVALS</strong></span>
+            <span class="brand-sub">&amp; SECURE STORAGE</span>
+          </div>
+        </a>
+        <p>Specialists in residential and commercial removals across Dorset, Wiltshire, Somerset and Nationwide UK.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="calculator.html">Cost Estimator</a></li>
+          <li><a href="about.html">Why Choose Us</a></li>
+          <li><a href="locations.html">Areas Covered</a></li>
+          <li><a href="reviews.html">Client Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links-list">
+          <li><a href="services.html#home-removals">Southwest Home Moves</a></li>
+          <li><a href="services.html#storage">Clean Storage Units</a></li>
+          <li><a href="services.html#commercial">Office Relocations</a></li>
+          <li><a href="services.html#van">Man with a Van</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Depot Contact</h4>
+        <div class="footer-contact-info">
+          <p><strong>Hotline:</strong> <a href="tel:01747859213">01747 859213</a></p>
+          <p><strong>Email:</strong> <a href="mailto:mail@rdsremovals.co.uk">mail@rdsremovals.co.uk</a></p>
+          <p><strong>Depot:</strong> Shaftesbury SP7 / BA12</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-row">
+      <div class="container fbr-flex">
+        <span>&copy; 2026 RDS Removals and Storage. All rights reserved.</span>
+        <div class="fbr-legal-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Quote Popup Window -->
+  <div class="modal-overlay" id="quote-modal-overlay">
+    <div class="modal-box-card tilt-card">
+      <button class="modal-close-x" id="modal-close-btn">&times;</button>
+      <div class="modal-head">
+        <span class="sub-tag">Free Moving Survey</span>
+        <h3>Request Your Tailored Quotation</h3>
+        <p>Complete the details below and our coordinator will confirm your fixed price within 2 working hours.</p>
+      </div>
+
+      <form id="modal-quote-form" class="clean-form">
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="mq-name">Full Name *</label>
+            <input type="text" id="mq-name" required placeholder="John Smith">
+          </div>
+          <div class="form-field">
+            <label for="mq-phone">Phone Number *</label>
+            <input type="tel" id="mq-phone" required placeholder="01747 859213">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="mq-email">Email Address *</label>
+          <input type="email" id="mq-email" required placeholder="john@example.co.uk">
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="mq-from">Moving From Postcode *</label>
+            <input type="text" id="mq-from" required placeholder="e.g. SP7 8AB">
+          </div>
+          <div class="form-field">
+            <label for="mq-to">Moving To Postcode *</label>
+            <input type="text" id="mq-to" required placeholder="e.g. BA12 9AH">
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-field">
+            <label for="mq-service">Service Needed</label>
+            <select id="mq-service">
+              <option value="Home Removals">Home Removals</option>
+              <option value="Storage">Secure Storage</option>
+              <option value="Commercial Relocation">Commercial Office Move</option>
+              <option value="Man with a Van">Man in a Van</option>
+              <option value="Packing Materials">Packing Materials</option>
+              <option value="Nationwide Move">Nationwide UK Move</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="mq-property">Property Size</label>
+            <select id="mq-property">
+              <option value="1 Bed">1 Bed Flat/Apartment</option>
+              <option value="2 Bed">2 Bed House/Flat</option>
+              <option value="3 Bed" selected>3 Bed Family House</option>
+              <option value="4 Bed">4 Bed House</option>
+              <option value="5+ Bed">5+ Bed Property</option>
+              <option value="Office">Commercial Office</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="mq-notes">Specific Requirements / Notes</label>
+          <textarea id="mq-notes" rows="2" placeholder="Awkward access, piano, packing required..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">Submit Quote Request</button>
+
+        <div class="modal-success-pane" id="modal-form-success">
+          <div class="msp-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4>Request Received!</h4>
+          <p>Thank you. Our move coordinator will contact you shortly.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

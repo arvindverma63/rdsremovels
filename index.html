@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -91,12 +91,11 @@
     </div>
   </header>
 
-  <!-- Screen-Fitted Clean Hero Section -->
+  <!-- Screen-Fitted Clean Hero Section with Full Photo Background -->
   <section class="home-hero-section">
     <div class="container">
-      <div class="hero-layout-grid">
+      <div class="hero-content-wrapper">
         
-        <!-- Left: Punchy Headings -->
         <div class="hero-text-pane">
           <div class="live-dispatch-badge">
             <span class="pulse-dot"></span>
@@ -111,6 +110,32 @@
             Punctual, fully insured residential and business moves across Shaftesbury, Salisbury, Warminster, Gillingham, and nationwide. Zero hassle, fixed transparent prices, and complete peace of mind.
           </p>
 
+          <!-- Fast Moving Estimate Bar with 3D Elevation -->
+          <div class="hero-estimate-card tilt-card">
+            <div class="hec-header">
+              <span class="hec-title">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Fast Moving Estimate
+              </span>
+              <span class="hec-badge">Instant Callback</span>
+            </div>
+            <form action="calculator.html" method="GET" class="hec-form">
+              <div class="hec-input-wrapper">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <input type="text" name="from" placeholder="From Postcode (e.g. SP7)" required>
+              </div>
+              <div class="hec-input-wrapper">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <input type="text" name="to" placeholder="To Postcode (e.g. BA12)" required>
+              </div>
+              <button type="submit" class="btn-primary hec-btn">
+                <span>Continue</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Secondary Actions -->
           <div class="hero-buttons-row">
             <a href="calculator.html" class="btn-primary">
               <span>Calculate Moving Cost</span>
@@ -155,30 +180,6 @@
             </div>
           </div>
 
-        </div>
-
-        <!-- Right: Photographic Card with Fast Postcode Quote -->
-        <div class="hero-media-pane">
-          <div class="hero-stage-card tilt-card">
-            <div class="hero-stage-img-wrap">
-              <img src="hero.jpg" alt="RDS Removals professional team with removal vehicle">
-            </div>
-
-            <div class="hero-floating-quote-box">
-              <div class="hfq-header">
-                <h3>Fast Moving Estimate</h3>
-                <span class="hfq-tag">Instant Callback</span>
-              </div>
-              <form action="calculator.html" method="GET" class="quick-postcode-form">
-                <input type="text" name="from" placeholder="From Postcode (e.g. SP7 8AB)" class="qpf-input" required>
-                <input type="text" name="to" placeholder="To Postcode (e.g. BA12 9AH)" class="qpf-input" required>
-                <button type="submit" class="btn-primary">
-                  <span>Continue</span>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
 
       </div>

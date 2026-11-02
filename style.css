@@ -473,20 +473,35 @@ button {
 }
 
 /* ==========================================================================
-   Home Hero Section (Compact & Screen-Proportioned)
+   Home Hero Section (Full Photo Background & Screen-Proportioned)
    ========================================================================== */
 .home-hero-section {
   position: relative;
-  background: linear-gradient(180deg, #f1f5f9 0%, #f8fafc 100%);
-  padding: 45px 0 55px 0;
+  background-color: #f1f5f9;
+  background-image: 
+    linear-gradient(
+      90deg, 
+      rgba(248, 250, 252, 0.98) 0%, 
+      rgba(248, 250, 252, 0.95) 45%, 
+      rgba(248, 250, 252, 0.78) 65%, 
+      rgba(248, 250, 252, 0.25) 88%, 
+      rgba(248, 250, 252, 0.05) 100%
+    ),
+    url('hero.jpg');
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding: 55px 0 65px 0;
   border-bottom: 1px solid var(--border-light);
 }
 
-.hero-layout-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 40px;
-  align-items: center;
+.hero-content-wrapper {
+  max-width: 660px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text-pane {
@@ -500,11 +515,11 @@ button {
   align-items: center;
   gap: 8px;
   align-self: flex-start;
-  padding: 5px 14px;
+  padding: 6px 14px;
   border-radius: var(--radius-full);
   background: #ffffff;
   border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
   font-size: 12px;
   font-weight: 600;
   color: #0f172a;
@@ -527,14 +542,97 @@ button {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.6;
-  max-width: 520px;
+  max-width: 580px;
+}
+
+/* Fast Moving Estimate Card with 3D Depth */
+.hero-estimate-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.10), 0 0 0 1px rgba(15, 23, 42, 0.04);
+  max-width: 580px;
+}
+
+.hec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.hec-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hec-title svg {
+  color: #2563eb;
+}
+
+.hec-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #059669;
+  background: var(--emerald-soft);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+}
+
+.hec-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+}
+
+.hec-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hec-input-wrapper svg {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.hec-input-wrapper input {
+  width: 100%;
+  padding: 10px 12px 10px 34px;
+  font-size: 13px;
+  background: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  outline: none;
+  transition: var(--transition);
+  color: #0f172a;
+}
+
+.hec-input-wrapper input:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.hec-btn {
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .hero-buttons-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* Trust Metric Badges */
@@ -542,7 +640,8 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 8px;
+  max-width: 580px;
 }
 
 .trust-card-pill {
@@ -553,7 +652,7 @@ button {
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
 }
 
 .trust-icon-box {
@@ -581,94 +680,6 @@ button {
   color: var(--text-subtle);
 }
 
-/* Hero Right: Modern Compact Photographic Card with 3D Depth */
-.hero-media-pane {
-  position: relative;
-}
-
-.hero-stage-card {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 16px;
-  box-shadow: var(--shadow-xl);
-  position: relative;
-}
-
-.hero-stage-img-wrap {
-  width: 100%;
-  height: 290px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-stage-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.hero-stage-card:hover .hero-stage-img-wrap img {
-  transform: scale(1.03);
-}
-
-.hero-floating-quote-box {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 18px;
-  margin-top: 14px;
-  box-shadow: var(--shadow-sm);
-}
-
-.hfq-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.hfq-header h3 {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.hfq-tag {
-  font-size: 11px;
-  font-weight: 700;
-  color: #059669;
-  background: var(--emerald-soft);
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
-}
-
-.quick-postcode-form {
-  display: flex;
-  gap: 8px;
-}
-
-.qpf-input {
-  flex: 1;
-  padding: 9px 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-light);
-  background: #f8fafc;
-  font-size: 13px;
-  font-family: inherit;
-  color: #0f172a;
-  outline: none;
-  transition: var(--transition);
-}
-
-.qpf-input:focus {
-  border-color: #2563eb;
-  background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
-}
 
 /* ==========================================================================
    Key Statistics Bar
@@ -1853,8 +1864,25 @@ button {
     display: none;
   }
 
+  .home-hero-section {
+    background-image: 
+      linear-gradient(
+        180deg, 
+        rgba(248, 250, 252, 0.96) 0%, 
+        rgba(248, 250, 252, 0.94) 100%
+      ),
+      url('hero.jpg');
+    background-position: center;
+    padding: 35px 0 45px 0;
+    min-height: auto;
+  }
+
   .hero-main-title {
-    font-size: 32px;
+    font-size: 30px;
+  }
+
+  .hec-form {
+    grid-template-columns: 1fr;
   }
 
   .hero-trust-deck {

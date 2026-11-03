@@ -46,28 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Subtle 3D Perspective Card Tilt Effects (Cursor Tracking)
   // =========================================================================
   const init3DCardTilt = () => {
-    const cards = document.querySelectorAll('.tilt-card');
-    if (window.matchMedia('(hover: hover)').matches) {
-      cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-
-          const rotX = ((y - centerY) / centerY) * -5;
-          const rotY = ((x - centerX) / centerX) * 5;
-
-          card.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-        });
-      });
-    }
+    // WordPress-style smooth hover elevation is handled with high-performance CSS transitions
   };
 
   init3DCardTilt();

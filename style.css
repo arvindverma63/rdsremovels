@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
 
 :root {
-  /* Typography */
+  /* Typography - Clean WordPress Corporate Stack */
   --font-heading: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 
-  /* Light Modern Theme Palette */
+  /* WordPress Clean Light Theme Palette */
   --bg-body: #f8fafc;
   --bg-surface: #ffffff;
   --bg-surface-alt: #f1f5f9;
@@ -41,22 +41,22 @@
   --amber: #f59e0b;
   --amber-soft: #fffbeb;
 
-  /* Radius */
-  --radius-xs: 6px;
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  /* WordPress Component Radius Standards (Astra / Elementor / Kadence) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
   --radius-full: 9999px;
 
-  /* 3D Shadows & Elevations */
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.04), 0 0 0 1px rgba(15, 23, 42, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04), 0 0 0 1px rgba(15, 23, 42, 0.06);
-  --shadow-3d-hover: 0 20px 30px -10px rgba(37, 99, 235, 0.15), 0 8px 10px -6px rgba(37, 99, 235, 0.08), 0 0 0 1px rgba(37, 99, 235, 0.25);
+  /* WordPress Elevation Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 10px 20px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
 
-  --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.2s ease-in-out;
 }
 
 /* Reset & Universal Typography */
@@ -323,19 +323,24 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 18px;
+  padding: 12px 24px;
   border-radius: var(--radius-sm);
   background: #2563eb;
+  border: 1px solid #1d4ed8;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.18);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
   background: #1d4ed8;
-  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+  border-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
   transform: translateY(-1px);
 }
 
@@ -344,20 +349,23 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 18px;
+  padding: 11px 22px;
   border-radius: var(--radius-sm);
   background: #ffffff;
-  border: 1px solid var(--border-light);
-  color: #0f172a;
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-medium);
+  color: #1e293b;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background: var(--bg-surface-alt);
-  border-color: var(--border-medium);
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
   transform: translateY(-1px);
 }
 
@@ -391,7 +399,7 @@ button {
 .page-title {
   font-family: var(--font-heading);
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
@@ -423,15 +431,14 @@ button {
    3D Tilt & Card Elevation Engine
    ========================================================================== */
 .tilt-card {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s, border-color 0.25s;
-  transform-style: preserve-3d;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   will-change: transform;
 }
 
 .tilt-card:hover {
-  transform: translateY(-4px) perspective(1000px);
-  box-shadow: var(--shadow-3d-hover);
-  border-color: #93c5fd;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: #cbd5e1;
 }
 
 /* Common Section Header */
@@ -459,8 +466,8 @@ button {
 .section-title {
   font-family: var(--font-heading);
   font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: #0f172a;
   line-height: 1.25;
   margin-bottom: 10px;
@@ -528,8 +535,8 @@ button {
 .hero-main-title {
   font-family: var(--font-heading);
   font-size: 42px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1.15;
   color: #0f172a;
 }
@@ -605,9 +612,9 @@ button {
 
 .hec-input-wrapper input {
   width: 100%;
-  padding: 10px 12px 10px 34px;
-  font-size: 13px;
-  background: #f8fafc;
+  padding: 11px 12px 11px 36px;
+  font-size: 14px;
+  background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xs);
   outline: none;
@@ -722,7 +729,7 @@ button {
   display: block;
   font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
   line-height: 1.1;
 }
@@ -1484,7 +1491,7 @@ button {
 .cfc-title {
   font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
   margin-bottom: 6px;
 }
@@ -1523,10 +1530,10 @@ button {
 .form-field select,
 .form-field textarea {
   width: 100%;
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-light);
-  background: #f8fafc;
+  padding: 11px 14px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+  background: #ffffff;
   font-size: 13px;
   font-family: inherit;
   color: #0f172a;
@@ -1601,10 +1608,23 @@ button {
 
 .footer-col h4 {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #2563eb;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .footer-links-list {
@@ -1717,7 +1737,7 @@ button {
 .modal-head h3 {
   font-family: var(--font-heading);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f172a;
   margin: 6px 0 4px 0;
 }

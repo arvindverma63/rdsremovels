@@ -371,17 +371,17 @@ button {
 }
 
 /* ==========================================================================
-   Page Banners (For Sub-Pages with Impressive Background Images)
+   Page Banners (For Sub-Pages with Vivid & Impressive Background Images)
    ========================================================================== */
 .page-hero-banner {
   position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 68px 0 58px 0;
+  padding: 80px 0 70px 0;
   text-align: center;
-  border-bottom: 1px solid var(--border-light);
   overflow: hidden;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
 }
 
 .page-hero-banner::before {
@@ -390,19 +390,17 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg, 
-    rgba(255, 255, 255, 0.88) 0%, 
-    rgba(248, 250, 252, 0.82) 45%, 
-    rgba(241, 245, 249, 0.90) 100%
+    rgba(15, 23, 42, 0.70) 0%, 
+    rgba(15, 23, 42, 0.58) 50%, 
+    rgba(15, 23, 42, 0.74) 100%
   );
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
   z-index: 1;
 }
 
 .page-hero-banner .container {
   position: relative;
   z-index: 2;
-  max-width: 840px;
+  max-width: 860px;
 }
 
 .banner-services {
@@ -429,42 +427,47 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
-  color: #64748b;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--border-light);
-  padding: 4px 14px;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 16px;
   border-radius: var(--radius-full);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
   margin-bottom: 14px;
 }
 
 .page-breadcrumb a {
-  color: #2563eb;
+  color: #93c5fd;
   font-weight: 600;
+  transition: var(--transition);
 }
 
 .page-breadcrumb a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
 .page-title {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
-  color: #0f172a;
+  color: #ffffff;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .page-lead {
   font-size: 16px;
-  color: #334155;
-  max-width: 680px;
+  color: #f1f5f9;
+  max-width: 720px;
   margin: 0 auto;
   line-height: 1.65;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
 /* ==========================================================================
@@ -482,7 +485,7 @@ button {
 }
 
 /* Common Section Header */
-.section-header-wrap {
+.section-header-wrap 
   text-align: center;
   max-width: 680px;
   margin: 0 auto 36px auto;

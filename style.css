@@ -549,7 +549,7 @@ button {
 }
 
 .hero-content-wrapper {
-  max-width: 520px;
+  max-width: 580px;
   position: relative;
   z-index: 2;
 }
@@ -589,10 +589,10 @@ button {
 }
 
 .hero-subtext {
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--text-muted);
-  line-height: 1.55;
-  max-width: 480px;
+  line-height: 1.6;
+  max-width: 500px;
 }
 
 /* Fast Moving Estimate Card with 3D Depth */
@@ -1852,18 +1852,22 @@ button {
    ========================================================================== */
 @media (max-width: 1024px) {
   .home-hero-section {
-    background-image: url('hero.jpg');
-    background-position: right center;
-    padding: 35px 0 45px 0;
-    min-height: auto;
+    background-image: 
+      linear-gradient(
+        90deg, 
+        #ffffff 0%, 
+        #ffffff 36%, 
+        rgba(255, 255, 255, 0.94) 48%, 
+        rgba(255, 255, 255, 0.4) 56%, 
+        rgba(255, 255, 255, 0) 64%
+      ),
+      url('hero.jpg');
+    background-position: 80% center;
   }
   .hero-content-wrapper {
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    padding: 26px 22px;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.9);
+    max-width: 540px;
+  }
+  .hero-subtext {
     max-width: 480px;
   }
   .hero-layout-grid {

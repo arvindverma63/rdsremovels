@@ -1947,3 +1947,39 @@ button {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   WordPress CTA Banner Section
+   ========================================================================== */
+.cta-banner-section {
+  padding: 50px 0;
+  background: var(--bg-body);
+}
+
+.cta-banner-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 36px 40px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.cta-banner-content {
+  max-width: 600px;
+}
+
+.cta-banner-content .section-title {
+  margin-bottom: 8px;
+}
+
+.cta-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

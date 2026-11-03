@@ -527,21 +527,21 @@ button {
    ========================================================================== */
 .home-hero-section {
   position: relative;
-  background-color: #f1f5f9;
+  background-color: #ffffff;
   background-image: 
     linear-gradient(
       90deg, 
-      rgba(248, 250, 252, 0.98) 0%, 
-      rgba(248, 250, 252, 0.95) 45%, 
-      rgba(248, 250, 252, 0.78) 65%, 
-      rgba(248, 250, 252, 0.25) 88%, 
-      rgba(248, 250, 252, 0.05) 100%
+      #ffffff 0%, 
+      #ffffff 32%, 
+      rgba(255, 255, 255, 0.94) 42%, 
+      rgba(255, 255, 255, 0.45) 48%, 
+      rgba(255, 255, 255, 0) 54%
     ),
     url('hero.jpg');
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 560px;
+  min-height: 580px;
   display: flex;
   align-items: center;
   padding: 55px 0 65px 0;
@@ -549,7 +549,7 @@ button {
 }
 
 .hero-content-wrapper {
-  max-width: 660px;
+  max-width: 580px;
   position: relative;
   z-index: 2;
 }
@@ -592,7 +592,7 @@ button {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.6;
-  max-width: 580px;
+  max-width: 500px;
 }
 
 /* Fast Moving Estimate Card with 3D Depth */
@@ -1851,6 +1851,25 @@ button {
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1024px) {
+  .home-hero-section {
+    background-image: 
+      linear-gradient(
+        90deg, 
+        #ffffff 0%, 
+        #ffffff 36%, 
+        rgba(255, 255, 255, 0.94) 48%, 
+        rgba(255, 255, 255, 0.4) 56%, 
+        rgba(255, 255, 255, 0) 64%
+      ),
+      url('hero.jpg');
+    background-position: 80% center;
+  }
+  .hero-content-wrapper {
+    max-width: 540px;
+  }
+  .hero-subtext {
+    max-width: 480px;
+  }
   .hero-layout-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1937,16 +1956,20 @@ button {
   }
 
   .home-hero-section {
-    background-image: 
-      linear-gradient(
-        180deg, 
-        rgba(248, 250, 252, 0.96) 0%, 
-        rgba(248, 250, 252, 0.94) 100%
-      ),
-      url('hero.jpg');
-    background-position: center;
-    padding: 35px 0 45px 0;
+    background-image: url('hero.jpg');
+    background-position: 70% center;
+    padding: 30px 0 40px 0;
     min-height: auto;
+  }
+
+  .hero-content-wrapper {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 24px 20px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.9);
+    max-width: 100%;
   }
 
   .hero-main-title {

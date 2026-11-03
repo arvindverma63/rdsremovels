@@ -207,50 +207,34 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 72px;
 }
 
 .brand-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  transition: opacity 0.2s ease;
 }
 
-.brand-icon-box {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+.brand-link:hover {
+  opacity: 0.9;
 }
 
-.brand-title-wrap {
-  display: flex;
-  flex-direction: column;
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+  display: block;
 }
 
-.brand-title {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-}
-
-.brand-title strong {
-  color: #2563eb;
-  font-weight: 800;
-}
-
-.brand-sub {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--text-subtle);
+.footer-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 12px;
 }
 
 /* Main Navigation Menu */
@@ -1848,6 +1832,15 @@ button {
 }
 
 @media (max-width: 768px) {
+  .header-inner {
+    height: 62px;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    max-width: 160px;
+  }
+
   .top-notice-bar {
     display: none;
   }

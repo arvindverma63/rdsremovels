@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Reviews &amp; Testimonials | RDS Removals &amp; Storage</title>
   <meta name="description" content="Read authentic verified customer reviews and experiences with RDS Removals across Dorset, Wiltshire, and the UK.">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Professional Icon Library: FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -23,15 +24,15 @@
       </div>
       <div class="top-highlights">
         <span class="top-highlight-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan);"></i>
           £50,000 Goods Transit Cover
         </span>
         <span class="top-highlight-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <i class="fa-solid fa-star" style="color: var(--gold-star);"></i>
           4.9 / 5.0 (500+ Verified Moves)
         </span>
         <a href="tel:01747859213" class="top-phone-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <i class="fa-solid fa-phone" style="font-size: 12px;"></i>
           01747 859213
         </a>
       </div>
@@ -47,15 +48,19 @@
       <nav class="navigation-links">
         <a href="index.html" class="nav-link ">Home</a><a href="services.html" class="nav-link ">Services</a><a href="about.html" class="nav-link ">Why Choose Us</a><a href="locations.html" class="nav-link ">Areas Covered</a><a href="reviews.html" class="nav-link active">Reviews</a><a href="contact.html" class="nav-link ">Contact</a>
       </nav>
-      <button class="mobile-menu-trigger" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+      <button class="mobile-menu-trigger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="header-action-group">
         <a href="tel:01747859213" class="btn-header-call">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <i class="fa-solid fa-phone" style="font-size: 13px; color: var(--accent-cyan);"></i>
           <span>01747 859213</span>
         </a>
         <button class="btn-cta-quote open-quote-modal">
           <span>Request Quote</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i>
         </button>
       </div>
     </div>
@@ -76,56 +81,68 @@
     <div class="container">
       <div class="reviews-grid-deck">
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"From start to finish, RDS were outstanding. The quote was transparent, the crew arrived exactly on time, and our entire four-bedroom house was packed and unloaded without a single scratch. Superb!"</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Rachel H.</span>
-            <span class="reviewer-loc">Shaftesbury &rarr; Bath</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Shaftesbury &rarr; Bath</span>
           </div>
         </div>
 
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"Moving can be so stressful, but RDS made it completely painless. The team was cheerful, hard-working, and took incredible care with our antique furniture. We couldn't have asked for better."</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Peter &amp; Claire D.</span>
-            <span class="reviewer-loc">Salisbury Homeowner</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Salisbury Homeowner</span>
           </div>
         </div>
 
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"We used RDS for both our move and 3 months of storage while our new build was finishing. The storage units were spotlessly clean, and our furniture arrived back in pristine condition."</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Tom Watkins</span>
-            <span class="reviewer-loc">Warminster Relocation</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Warminster Relocation</span>
           </div>
         </div>
 
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"They moved our law office over the weekend. Professional, efficient, organized, and completely hassle-free. All filing cabinets and desks were reassembled perfectly. Thank you RDS!"</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Thorne &amp; Partners Solicitors</span>
-            <span class="reviewer-loc">Gillingham Commercial</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Gillingham Commercial</span>
           </div>
         </div>
 
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"I had a baby grand piano that needed specialist moving. RDS had the exact hydraulic equipment and padded shoe needed. Truly impressive expertise and care."</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Eleanor Vance</span>
-            <span class="reviewer-loc">Blandford Forum</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Blandford Forum</span>
           </div>
         </div>
 
         <div class="review-card-item">
-          <div class="review-card-stars">★★★★★</div>
+          <div class="review-card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
           <p class="review-card-quote">"The best removals company we have ever used. Punctual, courteous, and very reasonable pricing. We will definitely recommend RDS to friends and family."</p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Simon &amp; Lisa Brown</span>
-            <span class="reviewer-loc">Wiltshire to Devon</span>
+            <span class="reviewer-loc"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 4px; color: var(--accent-cyan);"></i>Wiltshire to Devon</span>
           </div>
         </div>
       </div>
@@ -143,33 +160,33 @@
             RDS Removals &amp; Storage delivers precision residential and commercial moving solutions across Shaftesbury, Salisbury, Warminster, Gillingham, and the entire UK. Fully insured, dedicated fleet, zero stress.
           </p>
           <div class="footer-contact-items">
-            <div><strong>Telephone:</strong> <a href="tel:01747859213">01747 859213</a></div>
-            <div><strong>Email:</strong> <a href="mailto:info@rdsremovals.co.uk">info@rdsremovals.co.uk</a></div>
-            <div><strong>Main Depot:</strong> Longmead Industrial Estate, Shaftesbury, Dorset SP7 8PL</div>
+            <div><i class="fa-solid fa-phone" style="color: var(--accent-cyan); width: 18px;"></i> <strong>Phone:</strong> <a href="tel:01747859213">01747 859213</a></div>
+            <div><i class="fa-solid fa-envelope" style="color: var(--accent-cyan); width: 18px;"></i> <strong>Email:</strong> <a href="mailto:info@rdsremovals.co.uk">info@rdsremovals.co.uk</a></div>
+            <div><i class="fa-solid fa-location-dot" style="color: var(--accent-cyan); width: 18px;"></i> <strong>Depot:</strong> Longmead Industrial Estate, Shaftesbury, Dorset SP7 8PL</div>
           </div>
         </div>
 
         <div>
           <h4 class="footer-heading">Services</h4>
           <ul class="footer-nav-list">
-            <li><a href="services.html">House Removals</a></li>
-            <li><a href="services.html">Commercial Relocations</a></li>
-            <li><a href="services.html">Secure Furniture Storage</a></li>
-            <li><a href="services.html">Professional Packing</a></li>
-            <li><a href="services.html">Piano &amp; Antique Moves</a></li>
-            <li><a href="services.html">Nationwide Relocations</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>House Removals</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>Commercial Relocations</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>Secure Furniture Storage</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>Professional Packing</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>Piano &amp; Antique Moves</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right" style="font-size: 10px; margin-right: 6px; color: var(--accent-cyan);"></i>Nationwide Relocations</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-heading">Areas Covered</h4>
           <ul class="footer-nav-list">
-            <li><a href="locations.html">Shaftesbury Removals</a></li>
-            <li><a href="locations.html">Salisbury Removals</a></li>
-            <li><a href="locations.html">Warminster Removals</a></li>
-            <li><a href="locations.html">Gillingham Removals</a></li>
-            <li><a href="locations.html">Blandford Forum</a></li>
-            <li><a href="locations.html">Bath &amp; Somerset</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Shaftesbury Removals</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Salisbury Removals</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Warminster Removals</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Gillingham Removals</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Blandford Forum</a></li>
+            <li><a href="locations.html"><i class="fa-solid fa-location-dot" style="font-size: 11px; margin-right: 6px; color: var(--accent-cyan);"></i>Bath &amp; Somerset</a></li>
           </ul>
         </div>
 
@@ -181,14 +198,14 @@
             <li><a href="contact.html">Request Free Survey</a></li>
             <li><a href="#">Privacy &amp; Cookie Policy</a></li>
             <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="../index.html" style="color: var(--accent-cyan); font-weight: bold;">&larr; Switch to Template 1</a></li>
+            <li><a href="../index.html" style="color: var(--accent-cyan); font-weight: bold;"><i class="fa-solid fa-arrow-left" style="font-size: 11px; margin-right: 6px;"></i>Switch to Template 1</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
         <p>&copy; 2026 RDS Removals &amp; Storage Ltd. Registered in England &amp; Wales. All rights reserved.</p>
-        <p>Template 2 Mockup &bull; Modern Luxury Logistics</p>
+        <p>Template 2 Mockup &bull; Professional Icons Powered by FontAwesome 6</p>
       </div>
     </div>
   </footer>
@@ -196,7 +213,7 @@
   <!-- Instant Quote Modal -->
   <div class="modal-overlay" id="quoteModal">
     <div class="modal-dialog-box">
-      <button class="modal-close-trigger" aria-label="Close">&times;</button>
+      <button class="modal-close-trigger" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <h3 style="font-size: 24px; font-weight: 800; color: var(--primary-navy); margin-bottom: 6px;">Request Your Free Move Quote</h3>
       <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Fixed transparent quote with zero obligation. We typically respond within 15 minutes.</p>
       
@@ -204,41 +221,56 @@
         <div class="input-row-split">
           <div class="form-field-group">
             <label class="form-field-label">Moving From (Postcode)</label>
-            <input type="text" name="from_pc" class="form-control" placeholder="e.g. SP7 8PL" required style="padding-left: 14px;">
+            <div class="form-field-input-wrap">
+              <i class="fa-solid fa-location-dot field-icon"></i>
+              <input type="text" name="from_pc" class="form-control" placeholder="e.g. SP7 8PL" required>
+            </div>
           </div>
           <div class="form-field-group">
             <label class="form-field-label">Moving To (Postcode)</label>
-            <input type="text" name="to_pc" class="form-control" placeholder="e.g. BA12 9AJ" required style="padding-left: 14px;">
+            <div class="form-field-input-wrap">
+              <i class="fa-solid fa-map-pin field-icon"></i>
+              <input type="text" name="to_pc" class="form-control" placeholder="e.g. BA12 9AJ" required>
+            </div>
           </div>
         </div>
 
         <div class="form-field-group">
           <label class="form-field-label">Full Name</label>
-          <input type="text" name="name" class="form-control" placeholder="Your name" required style="padding-left: 14px;">
+          <div class="form-field-input-wrap">
+            <i class="fa-solid fa-user field-icon"></i>
+            <input type="text" name="name" class="form-control" placeholder="Your name" required>
+          </div>
         </div>
 
         <div class="input-row-split">
           <div class="form-field-group">
             <label class="form-field-label">Phone Number</label>
-            <input type="tel" name="phone" class="form-control" placeholder="e.g. 07123 456789" required style="padding-left: 14px;">
+            <div class="form-field-input-wrap">
+              <i class="fa-solid fa-phone field-icon"></i>
+              <input type="tel" name="phone" class="form-control" placeholder="e.g. 07123 456789" required>
+            </div>
           </div>
           <div class="form-field-group">
             <label class="form-field-label">Move Size</label>
-            <select name="size" class="form-control" style="padding-left: 14px;">
-              <option>1-2 Bedroom Property</option>
-              <option selected>3-4 Bedroom Property</option>
-              <option>5+ Bedroom Executive Home</option>
-              <option>Commercial / Office Move</option>
-              <option>Self Storage Only</option>
-            </select>
+            <div class="form-field-input-wrap">
+              <i class="fa-solid fa-boxes-stacked field-icon"></i>
+              <select name="size" class="form-control">
+                <option>1-2 Bedroom Property</option>
+                <option selected>3-4 Bedroom Property</option>
+                <option>5+ Bedroom Executive Home</option>
+                <option>Commercial / Office Move</option>
+                <option>Self Storage Only</option>
+              </select>
+            </div>
           </div>
         </div>
 
         <button type="submit" class="btn-engine-submit">
           <span>Submit Free Quote Request</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <i class="fa-solid fa-arrow-right"></i>
         </button>
-        <p class="quote-guarantee-note">🔒 Your details are secure and never shared. £50,000 Goods in Transit Cover included.</p>
+        <p class="quote-guarantee-note"><i class="fa-solid fa-shield-halved" style="color: #10B981; margin-right: 4px;"></i> Your details are secure and never shared. £50,000 Goods in Transit Cover included.</p>
       </form>
     </div>
   </div>
